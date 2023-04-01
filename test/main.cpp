@@ -1,16 +1,12 @@
 
-extern "C" {
-    #include "lua.h"
-    #include "lualib.h"
-    #include "lauxlib.h"
-}
-#include "lua.hpp"
+#include <sol/sol.hpp>
+#include <cassert>
 
 #include <string>
 #include <iostream>
 
 int main(int argc, char* argv[]) {
-    lua_State* L = luaL_newstate();
+    sol::state lua;
 
     std::cout << "hello world, lua\n";
 

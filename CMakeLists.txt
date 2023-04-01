@@ -1,5 +1,6 @@
 cmake_minimum_required(VERSION 3.17.4)
-project(luawrap LANGUAGES C)
+project(luawrap)
+set (CMAKE_CXX_STANDARD 20)
 
 set(LUA_SRC "${PROJECT_SOURCE_DIR}/lua_src")
 
@@ -28,7 +29,9 @@ add_library(${PROJECT_NAME} STATIC
     ${LUA_SRC}/lauxlib.c #Auxiliary functions
 )
 
-target_include_directories(${PROJECT_NAME} PUBLIC ${LUA_SRC})
+target_include_directories(${PROJECT_NAME} PUBLIC ${LUA_SRC} "${PROJECT_SOURCE_DIR}/sol2")
+
+
 
 
 
