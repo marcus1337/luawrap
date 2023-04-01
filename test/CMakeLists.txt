@@ -1,0 +1,5 @@
+cmake_minimum_required(VERSION 3.17.4)
+project(simple_app)
+add_subdirectory("${PROJECT_SOURCE_DIR}/.." "${CMAKE_CURRENT_BINARY_DIR}/luawrap")
+add_executable(${PROJECT_NAME} "main.cpp")
+target_link_libraries(${PROJECT_NAME} PRIVATE "luawrap")
