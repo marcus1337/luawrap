@@ -27,9 +27,11 @@ add_library(${PROJECT_NAME} STATIC
     ${LUA_SRC}/lvm.c
     ${LUA_SRC}/lzio.c
     ${LUA_SRC}/lauxlib.c #Auxiliary functions
+
+    "${PROJECT_SOURCE_DIR}/src/LuaRegistry.cpp"
 )
 
-target_include_directories(${PROJECT_NAME} PUBLIC ${LUA_SRC} "${PROJECT_SOURCE_DIR}/sol2")
+target_include_directories(${PROJECT_NAME} PUBLIC ${LUA_SRC} "${PROJECT_SOURCE_DIR}/sol2" "${PROJECT_SOURCE_DIR}/include")
 
 
 
