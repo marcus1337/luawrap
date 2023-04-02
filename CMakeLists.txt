@@ -28,6 +28,17 @@ add_library(${PROJECT_NAME} STATIC
     ${LUA_SRC}/lzio.c
     ${LUA_SRC}/lauxlib.c #Auxiliary functions
 
+    ${LUA_SRC}/lbaselib.c
+    ${LUA_SRC}/lcorolib.c
+    ${LUA_SRC}/ldblib.c
+    ${LUA_SRC}/liolib.c
+    ${LUA_SRC}/lmathlib.c
+    ${LUA_SRC}/loslib.c
+    ${LUA_SRC}/lstrlib.c
+    ${LUA_SRC}/ltablib.c
+    ${LUA_SRC}/linit.c
+    ${LUA_SRC}/loadlib.c
+
     "${PROJECT_SOURCE_DIR}/src/LuaRegistry.cpp"
 )
 

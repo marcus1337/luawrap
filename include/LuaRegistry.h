@@ -11,7 +11,7 @@ class LuaRegistry {
     void loadScript(const std::string& scriptPath);
     std::string getScriptCode(const std::string& scriptPath);
 public:
-
+    LuaRegistry();
     sol::state& getState();
     void addScript(const std::string& scriptPath);
     void reloadScripts();

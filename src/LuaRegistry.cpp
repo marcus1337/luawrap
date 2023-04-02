@@ -2,6 +2,10 @@
 #include <fstream>
 #include <sstream>
 
+LuaRegistry::LuaRegistry() {
+    lua.open_libraries(sol::lib::base, sol::lib::package, sol::lib::math, sol::lib::string, sol::lib::table, sol::lib::debug);
+}
+
 void LuaRegistry::addScript(const std::string& scriptPath) {
     loadScript(scriptPath);
     scriptPaths.insert(scriptPath);
